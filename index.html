@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>House of Ice</title>
+<link rel="icon" type="image/jpg" href="icon.jpg">
+<script>
+function count()
+{
+if(localStorage.num)
+{localStorage.num=Number(localStorage.num)+1;}
+else
+{localStorage.num=1;}
+document.getElementById("visitors").innerHTML="Total Count Of Visitors: "+localStorage.num;
+}
+</script>
+<style>
+.flip-card {
+  background-color: transparent;
+  width: 500px;
+  height: 500px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: pink;
+  color: maroon;
+  transform: rotateY(180deg);
+}
+
+br
+{clear:left}
+i
+{ color:#E5679B}
+li
+{float:left}
+li a{
+background-color:pink;
+border:2px solid pink;
+padding:110px;
+display:block;
+color:black;
+font-size:30px;
+color:white;
+text-decoration:none;}
+li a:hover
+{
+background-color:white;
+color:pink;
+}
+li a:active
+{
+border:2px solid lightblue;
+background-color:black;
+color:lightblue;
+}
+a:hover
+{
+color:lightblue;
+background-color:black;
+}
+</style>
+</head>
+<body id="home"style="background-color:#D4F0F7" onload="count()">
+<div style="background-image:url('bg.webp');background-repeat:no-repeat;background-size:cover;background-attachment:fixed">
+<h1 style="font-family:Courier; font-size:120px;color:black;text-align:center">PaYoHiM</h1>
+<h1 style="font-family:Bebas Neue; font-size:80px;color:#443200;text-align:center">HOUSE OF ICE!</h1>
+<p style="font-family:Cursive;font-size:50px;color:purple"> &#128157 Our love, for your love &#127848 </p>
+</div>
+<section>
+<ul style="list-style-type:none">
+<li><a href="#home">Home</a></li>
+<li><a href="#menu">Menu</a></li>
+<li><a href="#about">About Us</a></li>
+<li><a href="#contact">Contact Us</a></li>
+</ul>
+</section>
+<br>
+<div style= "clear:left">
+<br>
+<b><p id="about" style="font-size:20px; text-align:center;color:green;font-family:Bebas Neue;">Ice cream is a delicious dessert that can be enjoyed in many different ways. It can be eaten by itself, as part of a sundae, or with cake. Ice cream is one of the most commonly loved desserts on this planet. It has a creamy, sweet taste that many people love, and we at <u>PaYoHiM</u> produce this love of people with utmost care and hygiene. 
+We ensure that evey bite or lick gives you a heavenly experience without compromising your health!
+The most delicious way to beat the heat on those extra warm summer days is by enjoying a tasty ice cream cone. Of course, you don't actually need it to be summer to have an excuse to enjoy a sundae on Sunday with your besties or add a scoop of vanilla to your brunch waffles, no matter what the weather is doing outside. Everything is just best with ice-cream, and if you’re thinking of posting a photo of your favorite scoops, make sure to tag us on the social media platforms along with the taglines of each icecream.
+</p></b>
+<br>
+<nav id="menu">
+<h1 style="color:gold;text-align:center;font-size:50px">MENU</h1>
+<br><br>
+<div>
+<img style="float:left; padding:20px" src="cp.jpeg" ,alt="Cherry Pistachio Ice Cream" height="500px">
+</div>
+<strong><h1 style="font-family:Courier; color:black">Cherry Pistachio Ice Cream</h1>
+<p><i>An old favorite with a new twist!</i></p>
+<p style="font-family:Courier;"># There is always room for ice cream.</p></strong>
+</div>
+<div>
+<div>
+<img style="float:left; padding:20px" src="gp.jpg" ,alt="Ginger Pineapple Ice Cream"  height="500px">
+</div>
+<strong><h1 style="font-family:Courier; color:black">Ginger Pineapple Ice Cream</h1>
+<p><i>Bring tropical flavors into your desserts with this sweet combo!</i></p>
+<p style="font-family:Courier;"># A winter wonderland in your mouth.</p></strong>
+</div>
+<br>
+<div>
+<div>
+<img style="float:right; padding:20px" src="rwb.jpg" ,alt="Red, White and Blueberry Ice Cream"  height="500px">
+</div>
+<strong><h1 style="font-family:Courier; color:black">Red, White and Blueberry Ice Cream</h1>
+<p><i>This ice cream is perfect for a July Fourth celebration, and it's simply berry delicious other times too.</i></p>
+<p style="font-family:Courier;"># If ice cream is the answer, then who cares what the question is!</p></strong>
+</div>
+<br style="clear:right">
+<div>
+<div>
+<img style="float:left; padding:20px" src="ssc.jpg" ,alt="Strawberry Shortcake Ice Cream"  height="500px">
+</div>
+<strong><h1 style="font-family:Courier; color:black">Strawberry Shortcake Ice Cream</h1>
+<p><i>Enjoy this classic dessert in a refreshing new way!</i></p>
+<p style="font-family:Courier;"># Ice cream always sounds like a good idea.</p></strong>
+</div>
+<div>
+<div>
+<img style="float:left; padding:20px" src="ct.jpg" ,alt="Cinnamon Toast Ice Cream"  height="500px">
+</div>
+<strong><h1 style="font-family:Courier; color:black">Cinnamon Toast Ice Cream</h1>
+<p><i>Comfort food turned dessert!</i></p>
+<p style="font-family:Courier;"># Let’s put your licking skills to the test.</p></strong>
+</div>
+<div>
+<div>
+<img style="float:left; padding:20px" src="celebration special.jpg" ,alt="Celebration Premium Ice Cream"  height="500px">
+</div>
+<strong><h1 style="font-family:Courier; color:black">🎉 Celebration Premium Ice Cream 🎉</h1>
+<p><i>This ice cream is like nothing you've ever tasted!</i></p>
+<p style="font-family:Courier;"># Fueled by ice cream!</p></strong>
+</div>
+<br>
+<div>
+<div>
+<img style="float:left; padding:20px" src="mmcherry.jpg" ,alt="Marzipan Maraschino Cherry Ice Cream"  height="500px">
+</div>
+<strong><h1 style="font-family:Courier; color:black">Marzipan Maraschino Cherry Ice Cream</h1>
+<p><i>Forget the cherry on top, We've created an entire scoop to be the star! With bits of almondy marzipan, it's pretty in pink, with a cherry INSIDE!</i></p>
+<p style="font-family:Courier;"># Ice cream is cheaper than therapy.</p></strong>
+</div>
+<div>
+<div>
+<img style="float:left; padding:20px" src="smores.jpg" ,alt="S'Mores Ice Cream"  height="500px">
+</div>
+<strong><h1 style="font-family:Courier; color:black">S'Mores Ice Cream</h1>
+<p><i>Enjoy all the flavors from your favorite fireside treat in a bowl!</i></p>
+<p style="font-family:Courier;"># It’s rude to say “no” to ice cream. </p></strong>
+</div>
+<br>
+<div>
+<div>
+<img style="float:left; padding:20px" src="lt.jpg" ,alt="Lemon Thyme Ice Cream"  height="500px">
+</div>
+<strong><h1 style="font-family:Courier; color:black">Lemon Thyme Ice Cream</h1>
+<p><i>This zesty, aromatic combination is unlike any ice cream you've ever tasted!</i></p>
+<p style="font-family:Courier;"># Ice cream season goes from age one until death.</p></strong>
+</div>
+<br>
+<div>
+<div>
+<img style="float:left; padding:20px" src="hp.jpg" ,alt="Honey Pistachio Ice Cream"  height="500px">
+</div>
+<strong><h1 style="font-family:Courier; color:black">Honey Pistachio Ice Cream</h1>
+<p><i>With Mediterranean flare, inspired by the sweet flavors of Greece, this combo is a sophisticated treat.</i></p>
+<p style="font-family:Courier;"># An ice cream a day keeps the stress away.</p></strong>
+</div>
+<div>
+<div>
+<img style="float:left; padding:20px" src="tccc.jpg" ,alt="Toasted Coconut Chocolate Chip Ice Cream"  height="500px">
+</div>
+<strong><h1 style="font-family:Courier; color:black">Toasted Coconut Chocolate Chip Ice Cream</h1>
+<p><i>Chocolate heaven interspersed with sweet, crunchy Coconut!</i></p>
+<p style="font-family:Courier;"># My blood type is ice cream.</p></strong>
+</div>
+<div>
+<div>
+<img style="float:left; padding:20px" src="bbp.jpg" ,alt="Brown Butter Pecan Ice Cream"  height="500px">
+</div>
+<strong><h1 style="font-family:Courier; color:black">Brown Butter Pecan Ice Cream</h1>
+<p><i>Toasted pecans and a simple caramel are a dream in ice cream!</i></p>
+<p style="font-family:Courier;"># Any time is ice cream time.</p></strong>
+</div>
+<br>
+<div>
+<div>
+<img style="float:left; padding:20px" src="cm.webp" ,alt="Cereal and Milk Ice Cream"  height="500px">
+</div>
+<strong><h1 style="font-family:Courier; color:black">Cereal and Milk Ice Cream</h1>
+<p><i>We bring you your frozen dessert and cereal dreams all in one!</i></p>
+<p style="font-family:Courier;"># Once you start licking it, there’s no quitting!</p></strong>
+</div>
+<div>
+<div>
+<img style="float:left; padding:20px" src="extra chocolatey.jpg" ,alt="Extra Chocolately Premium Ice Cream"  height="500px">
+</div>
+<strong><h1 style="font-family:Courier; color:black">Extra Chocolately Premium Ice Cream</h1>
+<p><i>The great combo kids love in chocolates now in dessert!</i></p>
+<p style="font-family:Courier;"># A surprise in every lick.</p></strong>
+</div>
+<br>
+<div>
+<div>
+<img style="float:left; padding:20px" src="unicorn special.jpg" ,alt="Unicorn Premium Ice Cream;"  height="500px">
+</div>
+<strong><h1 style="font-family:Courier; color:black">🦄 Unicorn Premium Ice Cream 🦄</h1>
+<p><i>Magic transported straight from Heaven!</i></p>
+<p style="font-family:Courier;"># A day without ice cream is a day wasted.</p></strong>
+</div>
+<div>
+<div>
+<img style="float:left; padding:20px" src="coffee.jpg" ,alt="Coffee Fudge Swirl Ice Cream"  height="400px">
+</div>
+<strong><h1 style="font-family:Courier; color:black">Coffee Fudge Swirl Ice Cream</h1>
+<p><i>Jazz up vanilla ice cream with some fudgy goodness and rich espresso.</i></p>
+<p style="font-family:Courier;"># Never say no to an ice cream.</p></strong>
+</div>
+<div>
+
+<img style="float:left; padding:20px" src="lps.jpg" ,alt="Lemon Poppy Seed Ice Cream"  height="400px">
+
+<strong><h1 style="font-family:Courier; color:black">Lemon Poppy Seed Ice Cream</h1>
+<p><i>Like your favorite lemony muffin, this combo is citrusy and luscious.</i></p>
+<p style="font-family:Courier;"># The best time for ice cream is always.</p></strong>
+</div>
+<br>
+<div>
+<div>
+<img style="float:left; padding:20px" src="baf.jpg" ,alt="Burnt Almond Fudge Ice Cream"  height="500px">
+</div>
+<strong><h1 style="font-family:Courier; color:black">Burnt Almond Fudge Ice Cream</h1>
+<p><i>Toasted almonds add a little sophistication to this chocolatey delight.</i></p>
+<p style="font-family:Courier;"># When in doubt, eat ice cream. </p></strong>
+</div>
+<div>
+<div>
+<img style="float:left; padding:20px" src="v.jpg" ,alt="Vanilla Ice Cream"  height="500px">
+</div>
+<strong><h1 style="font-family:Courier; color:black">Vanilla Ice Cream</h1>
+<p><i>How can the cloud be missed!</i></p>
+<p style="font-family:Courier;"># This must be what heaven tastes like.</p></strong>
+</div>
+<div>
+<div>
+<img style="float:left; padding:20px" src="s.jpg" ,alt="Strawberry Ice Cream"  height="450px">
+</div>
+<strong><h1 style="font-family:Courier; color:black">Strawberry Ice Cream</h1>
+<p><i>Who doesn't love strawberries?</i></p>
+<p style="font-family:Courier;"># It’s never too cold for ice cream.</p></strong>
+</div>
+</nav>
+
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+<center>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="jr.jpg" alt="Avatar" style="width:500px;height:500px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>BRAINWAVE ... Jordi Roca</h1>
+      <b><pre style="font-size:13px;font-family:Monospace">Jordi Roca i Fontané (born 1978, Girona, Catalonia, Spain)
+is the pastry chef of the restaurant El Celler de Can Roca.
+In 2014 he won the inaugural "World's Best Pastry Chef" award from
+Restaurant magazine. In April 2018, an episode of
+Chef's Table: Pastry featuring Jordi debuted on Netflix.
+He suffers from dystonia, a neurological disease that
+has left him permanently hoarse, yet he never stops to inspire us!</pre></b>
+      <p style="font-family: 'Brush Script MT', cursive; font-size:37px">We love him and his cutting-edge recipes<br>I mean who doesn't?!<span style="font-size:75px">&#128523;</span></p>
+    
+    </div>
+  </div>
+</div>
+</center>
+<br><br><br>
+<div style="text-align:center">
+<a href="joy.html" target=_blank style="text-decoration:none;background-color:rosybrown;color: gold;font-size: 28px;font-family:monospace;">FEELING BOREED?COME HAVE SOME FUN</a>
+</div>
+<center>
+<canvas id="canva" height=400 width=200 style="border: 2px solid pink>
+</canvas>
+<script>
+var c=document.getElementById("canva");
+var ctrl=c.context("2d");
+ctr.moveTo(50,300);
+ctr.lineTo(100,395);
+ctr.stroke();
+</script>
+</center>
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+<center>
+<p id="visitors">Total Count Of Visitors:0 </p>
+</center>
+</body>
+<hr>
+<footer>
+<a href="#home" style="text-align:left;color:pink;background-color:black;">GO TO TOP</a>
+<address id="contact" style="text-align:right;color:white;background-color:black;"> <div>REG NO:2127210801051</div><div>Phone :9876543210 </div>
+<div><a style="text-decoration:none;color:white;"href="mailto:2021it0813@svce.ac.in">Email:payohim@gmail.com</a></div>
+<div>Address:7952 Rockledge<br> Drive
+Webster, NY 14580</div>
+</address>
+</footer>
+</html> 

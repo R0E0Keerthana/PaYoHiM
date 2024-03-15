@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MoRe To ExPlOrE</title>
+<link rel="icon" type="image/jpg" href="icon.jpg">
+<style>
+@keyframes anime{
+0%{background-color:turquoise;}
+25%{background-color:#A5CAD2;}
+50%{background-color:#758EB7;}
+75%{background-color:#8A5082;}
+100%{background-color:#FF7B89;}
+}
+</style>
+<script>
+function loc()
+{
+navigator.geolocation.getCurrentPosition(display);
+}
+function display(pos)
+{
+document.getElementById("msg").innerHTML="Delivery Latitude:"+pos.coords.latitude+"<br>Delivery Longitutde:"+pos.coords.longitude;
+}
+function dragt(topping)
+{
+topping.dataTransfer.setData("t",topping.target.id);
+}
+function drags(scoop)
+{
+scoop.dataTransfer.setData("s",scoop.target.id);
+}
+function dragc(cone)
+{
+cone.dataTransfer.setData("c",cone.target.id);
+}
+function dropt(topping)
+{
+topping.preventDefault();
+var ref=topping.dataTransfer.getData("t");
+topping.target.appendChild(document.getElementById(ref));
+}
+function drops(scoop)
+{
+scoop.preventDefault();
+var ref=scoop.dataTransfer.getData("s");
+scoop.target.appendChild(document.getElementById(ref));
+}
+function dropc(cone)
+{
+cone.preventDefault();
+var ref=cone.dataTransfer.getData("c");
+cone.target.appendChild(document.getElementById(ref));
+}
+</script>
+</head>
+<body style="background-color: turquoise;">
+	<center><h1 style="color: palevioletred;">Watch and Feel the Emotions of Icecream</h1>
+		<br><video  height="500" controls>
+  <source src="PaYoHim-vdo.mp4" type="video/mp4">
+    Your browser does not support the video tag.</video>
+    <br>
+    <p style="font-size: 25px;">While you explore this icy world keep yourself warm with some songs!</p>
+    <br>
+     <audio controls autoplay loop>
+  <source src="BLACKPINK-Ice-Cream-with-Selena-Gomez.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio> 
+<p style="font-size: 27px;">Keep Scrolling if You wanna know about the love of all our lifes</p>
+<img src="imap.jpg" alt="Icecream" usemap="#Icecream" height=500px>
+<map name="Icecream">
+	<area shape="circle" coords="153,145,28" alt="Cherry" href="https://en.wikipedia.org/wiki/Cherry" target="_blank">
+	<area shape="circle" coords="169,217,48" alt="Cream" href="https://en.wikipedia.org/wiki/Cream" target="_blank">
+	<area shape="polygon" coords="173,473,137,365,113,269,157,267,197,293-,193,357,173,473" alt="Waffle" href="https://en.wikipedia.org/wiki/Waffle" target="_blank">
+</map>
+<br>
+<p style="font-size:30px; color:SlateBlue;">INVENT Your OWN Recipie </p>
+TOPPING:-
+<div id="topping" style=" animation-duration:20s; animation-name:anime; border:1px solid black; text-align:center; height:150px; width:150px;" ondragover="dropt(event)"></div>
+<div>
+<img id="t1" src="t1.jpg" draggable="true" ondragstart="dragt(event)" height="70px">
+<img id="t2" src="t2.jpg" draggable="true" ondragstart="dragt(event)" height="70px">
+<img id="t3" src="t3.jpg" draggable="true" ondragstart="dragt(event)" height="70px">
+<img id="t4" src="t4.jpg" draggable="true" ondragstart="dragt(event)" height="70px">
+<img id="t5" src="t5.jpg" draggable="true" ondragstart="dragt(event)" height="70px">
+</div>
+<br>
+SCOOP:-
+<div id="scoop" style=" animation-duration:20s; animation-name:anime; border:1px solid black; text-align:center; height:200px; width:200px;" ondragover="drops(event)"></div>
+<div>
+<img id="s1" src="s1.jpg" draggable="true" ondragstart="drags(event)" width="70px">
+<img id="s2" src="s2.jpg" draggable="true ondragstart=" drags(event)" width="70px">
+<img id="s3" src="s3.jpg" draggable="true" ondragstart="drags(event)" width="67px">
+<img id="s4" src="s4.jpg" draggable="true" ondragstart="drags(event)" width="70px">
+</div>
+<br>
+CONE:-
+<div id="cone" style=" animation-duration:20s; animation-name:anime; border:1px solid black; text-align:center; height:200px; width:200px;" ondragover="dropc(event)"></div>
+<div>
+<img id="c1" src="c1.jpg" draggable="true" ondragstart="dragc(event)" width="70px">
+<img id="c2" src="c3.jpg" draggable="true" ondragstart="dragc(event)" width="67px">
+<img id="c3" src="c2.jpg" draggable="true" ondragstart="dragc(event)" width="70px">
+<img id="c4" src="c4.jpg" draggable="true" ondragstart="dragc(event)" width="70px">
+</div>
+<br>
+<button onclick="loc()">Deliver at Current Location</button>
+<p id="msg"></p>
+</center>
+</body>
+</html>
