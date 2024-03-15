@@ -342,15 +342,50 @@ has left him permanently hoarse, yet he never stops to inspire us!</pre></b>
 <div style="text-align:center">
 <a href="joy.html" target=_blank style="text-decoration:none;background-color:rosybrown;color: gold;font-size: 28px;font-family:monospace;">FEELING BOREED?COME HAVE SOME FUN</a>
 </div>
+<br><br>
 <center>
-<canvas id="canva" height=400 width=200 style="border: 2px solid pink>
+<canvas id="can" height=300 width=300 style="border: 2px solid pink">
 </canvas>
 <script>
-var c=document.getElementById("canva");
-var ctrl=c.context("2d");
-ctr.moveTo(50,300);
-ctr.lineTo(100,395);
-ctr.stroke();
+var c=document.getElementById("can");
+var ctrl=c.getContext("2d");
+ctrl.moveTo(80,150);
+ctrl.lineTo(150,295);
+ctrl.stroke();
+ctrl.moveTo(150,295);
+ctrl.lineTo(220,150);
+ctrl.stroke()
+ctrl.moveTo(220,150);
+ctrl.lineTo(80,150);
+ctrl.stroke()
+ctrl.beginPath();
+ctrl.arc(80,150,40,0,2*Math.PI);
+ctrl.fillStyle="pink";
+ctrl.fill();
+ctrl.beginPath();
+ctrl.arc(160,150,40,0,2*Math.PI);
+ctrl.fillStyle="pink";
+ctrl.fill();
+ctrl.beginPath();
+ctrl.arc(240,150,40,0,2*Math.PI);
+ctrl.fillStyle="pink";
+ctrl.fill();
+ctrl.beginPath();
+ctrl.arc(120,90,40,0,2*Math.PI);
+ctrl.fillStyle="pink";
+ctrl.fill();
+ctrl.beginPath();
+ctrl.arc(200,90,40,0,2*Math.PI);
+ctrl.fillStyle="pink";
+ctrl.fill();
+ctrl.beginPath();
+ctrl.arc(160,40,40,0,2*Math.PI);
+ctrl.fillStyle="red";
+ctrl.fill();
+ctrl.beginPath();
+ctrl.arc(190,30,20,Math.PI,2*Math.PI);
+ctrl.fillStyle="green";
+ctrl.stroke();
 </script>
 </center>
 <pre>
